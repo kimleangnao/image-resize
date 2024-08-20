@@ -27,7 +27,6 @@ const processImages = (req, res) => {
 
     exec(command, (err, stdout, stderr) => {
         if (err) {
-            console.log(stderr)
             return res.status(500).send('Image processing failed')
         }
         res.download(outputPath, (err) => {
