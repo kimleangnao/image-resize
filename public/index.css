@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root{
+    --main-backgroundColor: #2D2A2B;
+    --main-textColor: #FFFFFF;
+    --main-btnColor: #595959;
+    --main-btnColor-active: #4062BA;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+}
+html{
+    font-family: "Roboto", sans-serif;
+}
+
+.body{
+    width: 100vw;
+    height: 100vh;
+    color: var(--main-textColor);
+    background-color: var(--main-backgroundColor);
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+}
+.body_config{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: flex-start;
+    overflow-y: scroll;
+}
+.body_config_container{
+    width: 90%;
+    height: 40px;
+    display: block;
+    margin-top: 25px;
+    line-height: 40px;
+    background-color: #36646A;
+    border-radius: 5px;
+    padding-left: 20px;
+
+}
+.body_config_wrapper{
+    width: 90%;
+    margin-top: 25px;
+}
+.body_config_wrapper_subTitle{
+    font-size: 16px;
+}
+.body_config_wrapper_boxes{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: flex-start;
+}
+.body_config_wrapper_boxes_btn{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background-color: var(--main-btnColor);
+    margin-bottom: 10px;
+    color: var(--main-textColor);
+    border: unset;
+    outline: none;
+    border-radius: 5px;
+}
+.body_config_wrapper_boxes_btn:hover{
+    cursor: pointer;
+}
+.body_config_wrapper_boxes_btn_active{
+    background-color: var(--main-btnColor-active);
+}
+
+.body_config_wrapper_label{
+    font-size: 16px;
+}
+.body_config_wrapper_inputNumber{
+    width: 100%;
+    height: 40px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding-left: 10px;
+    border-radius: 5px;
+}
+
+.body_config_estimate{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 25px;
+}
+.body_config_timer{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 16px;
+}
+.body_config_startBtn{
+    width: 150px;
+    height: 150px;
+    border-radius: 150px;
+    margin: 25px 0;
+    background-color: var(--main-btnColor-active);
+    color: var(--main-textColor);
+    font-size: 18px;
+    border: unset;
+    outline: none;
+}
+.body_config_startBtn:hover{
+    cursor: pointer;
+}
+
+.body_screen{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--main-backgroundColor);
+    display: block;
+    overflow: auto;
+    padding-bottom: 25px;
+}
+.body_screen_progressTitle{
+    margin-bottom: 25px;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 18px;
+}
+.body_screen_progressContainer{
+    width: 90%;
+    height: 40px;
+    background-color: #575651;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin:  0 auto;
+}
+.body_screen_progressContainer_progress{
+    width: 50%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: #55699D;
+
+}
+.body_screen_progressContainer_percentages{
+    line-height: 40px;
+    padding-left: 10px;
+    font-weight: bolder;
+}
+.body_screen_estimateTimeTitle{
+    font-size: 18px;
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+}
+.body_screen_waitTime{
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+}
+.body_screen_waiting{
+    width: 250px;
+    height: 250px;
+    margin: 25px auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    object-fit: cover;
+}
+
+.body_screen_cancelBtn{
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: unset;
+    outline: none;
+    background-color: #be5c55;
+    color: var(--main-textColor);
+}
+.body_screen_cancelBtn:hover{
+    cursor: pointer;
+}
+.body_screen_donotClose{
+    width: 90%;
+    text-align: center;
+    margin: 5px auto;
+    font-size: 12px;
+}
+.body_screen_downloadBtn{
+    display: none;
+    margin: 0 auto 25px;
+    width: 150px;
+    height: 50px;
+    border-radius: 5px;
+    font-size: 20px;
+    border: unset;
+    outline: none;
+    background-color: #4042c2;
+    color: var(--main-textColor);
+}
+.body_screen_downloadBtn a{
+    color: var(--main-textColor);
+    text-decoration: none;
+}
+
+
+@media (min-width: 500px){
+    
+    .body_config_wrapper_boxes{
+        justify-content: flex-start;
+    }
+    .body_config_wrapper_boxes_btn{
+        width: 200px;
+        margin-right: 10px;
+    }
+    .body_screen{
+        width: 500px;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1024px){
+    .body{
+        overflow: auto;
+        margin: 0 auto;
+        flex-flow: row nowrap;
+    }
+    .body_config{
+        width: 500px;
+        overflow: hidden;
+        background-color: #373637;
+    }
+    .body_screen{
+        width: 500px;
+        margin: 0 auto;
+        display: block;
+    }
+    .body_screen_waiting{
+        width: 400px;
+        height: 400px;
+        margin: 25px auto;
+    }
+    .body_screen_cancelBtn{
+        display: none;
+    }
+}

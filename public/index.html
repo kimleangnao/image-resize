@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!-<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Image Resize</title>
+        <meta name="description" content="A website for scalling image up or scale down. Changing Image Size">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div class="body">
+            <div id="js_config" class="body_config">
+                <section class="body_config_container">
+                    <input type="file" id="js_inputUpload" />
+                </section>
+                <section class="body_config_wrapper">
+                    <h2 class="body_config_wrapper_subTitle">
+                        TASKS
+                    </h2>
+                    <div class="body_config_wrapper_boxes">
+                        <button id="js_upScale" class="body_config_wrapper_boxes_btn body_config_wrapper_boxes_btn_active">Upscale</button>
+                        <button id="js_downScale" class="body_config_wrapper_boxes_btn">Downscale</button>
+                    </div>
+                </section>
+                <section class="body_config_wrapper">
+                    <h2 class="body_config_wrapper_subTitle">
+                        Algorithms
+                    </h2>
+                    <div class="body_config_wrapper_boxes">
+                        <button id="js_algo1" class="body_config_wrapper_boxes_btn body_config_wrapper_boxes_btn_active">Algorithms 1</button>
+                        <button id="js_algo2" class="body_config_wrapper_boxes_btn">Algorithms 2</button>
+                        <button id="js_algo3" class="body_config_wrapper_boxes_btn">Algorithms 3</button>
+                    </div>
+                </section>
+                <section class="body_config_wrapper">
+                    
+                    <label class="body_config_wrapper_label">Width</label><br/>
+                    <input type="number" id="js_width" class="body_config_wrapper_inputNumber" value="800"/>
+
+                    <label class="body_config_wrapper_label">Height</label><br/>
+                    <input type="number" id="js_height" class="body_config_wrapper_inputNumber" value="800"/>
+                </section>
+                <p class="body_config_estimate">ESTIMATE</p>
+                <p id="js_estimateTime" class="body_config_timer">10 min 10 sec</p>
+
+                <button id="js_startBtn" class="body_config_startBtn">START</button>
+            
+            </div>
+            <div id="js_screen" class="body_screen">
+           
+                <h1 class="body_screen_progressTitle">In Progress</h1>
+                <p class="body_screen_donotClose">DON'T CLOSE THE TAB YET, DOWNLOAD WILL START IN A FEW SECONDS</p>
+                <!-- 
+                <section class="body_screen_progressContainer">
+                    <div class="body_screen_progressContainer_progress">
+                        <div class="body_screen_progressContainer_percentages"> 50% </div>
+                    </div>
+                </section>
+                -->
+                <p class="body_screen_estimateTimeTitle">Estimate Time</p>
+                <p class="body_screen_waitTime">0 min 10 sec</p>
+
+                <picture class="body_screen_waiting">
+                    <source media="(min-width: 1000px)" srcset="./resources/waiting_400x400.png">
+                    <source media="(min-width: 100px)" srcset="./resources/waiting_100x100.png">
+                    <img src="./resources/waiting_400x400.png" alt="Responsive Image">
+                </picture>
+        
+
+                <button id="js_download" class="body_screen_downloadBtn">
+                    
+                   
+                </button>
+                <button id="js_cancelBtn" class="body_screen_cancelBtn">CONFIG</button>
+             
+            </div>
+        </div>
+        
+        <script src="./index.js" type="module" async defer></script>
+    </body>
+</html>
