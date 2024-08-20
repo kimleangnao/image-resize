@@ -1,0 +1,1 @@
+This is where the uploads images and resized image will be store temporary before its deletion.
